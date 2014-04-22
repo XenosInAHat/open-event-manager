@@ -7,13 +7,16 @@ crud = Crud(db)
 
 db.define_table('event',
         Field('title'),
-        Field('date'),
+        Field('event_date', 'date'),
+        #Field('date'),
         Field('host'),
         Field('location'),
         Field('description', 'text'),
+        Field('public', 'boolean'),
         format = '%(event)s')
 
 db.event.description.requires = IS_NOT_EMPTY()
-db.event.date.requires = IS_NOT_EMPTY()
+db.event.event_date.requires = IS_NOT_EMPTY()
+db.event.event_date.requires = IS_DATE()
 db.event.host.requires = IS_NOT_EMPTY()
 db.event.title.requires = IS_NOT_EMPTY()

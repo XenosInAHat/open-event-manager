@@ -66,3 +66,56 @@ success!
 timestamp: 2014-04-21T21:54:30.902147
 ALTER TABLE auth_user ADD username CHAR(128);
 success!
+timestamp: 2014-04-21T23:26:38.073910
+ALTER TABLE event ADD event_date DATE;
+timestamp: 2014-04-21T23:26:38.076540
+ALTER TABLE event ADD public CHAR(1);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

@@ -1,7 +1,9 @@
 {{extend 'layout2.html'}}
 <h1>Current events</h1>
 <ul>{{for event in events:}}
+        {{if event.public is not None and event.public is True:}}
         {{=LI(A(event.title, _href=URL('show', args=event.id)))}}
+        {{pass}}
     {{pass}}
 </ul>
 [ {{=A('create_event', _href=URL('create'))}} ]

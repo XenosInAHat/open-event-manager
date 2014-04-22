@@ -11,6 +11,5 @@ def show():
     this_event = db.event(request.args(0,cast=int)) or redirect(URL('index'))
     return dict(event=this_event)
 
-
 def user():
     return dict(form=auth())
