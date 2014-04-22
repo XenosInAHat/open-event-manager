@@ -15,9 +15,19 @@ db.define_table('event',
         Field('author'),
         format = '%(event)s')
 
+db.define_table('guestlist',
+        Field('name'),
+        Field('email'),
+        Field('phone', 'string'),
+        format = '%(guestlist)s')
+
 db.event.description.requires = IS_NOT_EMPTY()
 db.event.event_date.requires = IS_NOT_EMPTY()
 db.event.event_date.requires = IS_DATE()
 db.event.host.requires = IS_NOT_EMPTY()
 db.event.title.requires = IS_NOT_EMPTY()
 db.event.author.readable = db.event.author.writable = False
+
+db.guestlist.name.requires = IS_NOT_EMPTY()
+db.guestlist.email.requires = IS_NOT_EMPTY()
+db.guestlist.email.requires = IS_EMAIL()

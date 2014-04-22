@@ -252,3 +252,12 @@ success!
 success!
 success!
 success!
+success!
+timestamp: 2014-04-22T01:54:57.983605
+CREATE TABLE guestlist(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    email CHAR(512),
+    phone CHAR(512)
+);
+success!

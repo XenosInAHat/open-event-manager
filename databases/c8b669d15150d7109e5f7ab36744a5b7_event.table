@@ -55,7 +55,7 @@ sg9
 I00
 sg10
 g15
-ssS'id'
+ssS'public'
 p19
 (dp20
 g4
@@ -63,14 +63,14 @@ I512
 sg5
 I00
 sg6
-I1
+I7
 sg7
-S'INTEGER PRIMARY KEY AUTOINCREMENT'
+S'CHAR(1)'
 p21
 sg9
 I00
 sg10
-S'id'
+S'boolean'
 p22
 ssS'host'
 p23
@@ -144,7 +144,7 @@ I00
 sg10
 S'date'
 p42
-ssS'public'
+ssS'id'
 p43
 (dp44
 g4
@@ -152,13 +152,13 @@ I512
 sg5
 I00
 sg6
-I7
+I1
 sg7
-S'CHAR(1)'
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
 p45
 sg9
 I00
 sg10
-S'boolean'
+S'id'
 p46
 ss.
