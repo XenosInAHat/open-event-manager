@@ -66,13 +66,18 @@
 </head>
 
 <body>
-  {{if auth.is_logged_in():}}
-  [ {{=A('Logout', _href=URL('default', 'user', args='logout'))}} ]
-  {{pass}}
+  <div align="right">
+    [ {{=A('Home', _href=URL('index'))}} ]
 
-  {{if not auth.is_logged_in():}}
-  [ {{=A('Login', _href=URL('default', 'user', args='login'))}} ]
-  {{pass}}
+    {{if auth.is_logged_in():}}
+    [ {{=A('Logout', _href=URL('default', 'user', args='logout'))}} ]
+    {{pass}}
+
+    {{if not auth.is_logged_in():}}
+    [ {{=A('Login', _href=URL('default', 'user', args='login'))}} ]
+    {{pass}}
+  </div>
+
   <!-- container -->
   <div class="container">
     <!-- main -->
