@@ -6,6 +6,6 @@
 <h3>Description:</h3>
 <p> {{=event.description}} <p>
 <br />
-<p>{{if event.author == auth.user_id:}}
+<p>{{if auth.user_id is not None and event.author == session.auth.user:}}
 [ {{=A('delete event', _href=URL('confirm', args=event.id))}} ]
     {{pass}} </p>

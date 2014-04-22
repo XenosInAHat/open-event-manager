@@ -12,7 +12,7 @@ db.define_table('event',
         Field('location'),
         Field('description', 'text'),
         Field('public', 'boolean'),
-        Field('author'),
+        Field('author', default=session.auth.user if session.auth else None),
         format = '%(event)s')
 
 db.define_table('guestlist',

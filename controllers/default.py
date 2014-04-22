@@ -4,7 +4,7 @@ def index():
 
 @auth.requires_login()
 def create():
-    form = SQLFORM(db.event).process(next=URL('index'))
+    form = SQLFORM(db.event).process(next=(URL('index')))
     return dict(form=form)
 
 def show():
