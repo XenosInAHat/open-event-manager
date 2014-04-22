@@ -17,6 +17,9 @@ Each page has a link back to the home page.
 Separate events into the mentioned categories.
 
 ####Next Feature to Implement:
+* **Add edit event link**:  
+Allow users to edit event information  
+_This is only available to the user who created the event_.
 * **Create guest list for each event**:  
 Use database to create list of attendees
 * **Allow users to sign-up/register for events**:  
