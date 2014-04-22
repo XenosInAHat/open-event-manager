@@ -1,14 +1,17 @@
 {{extend 'layout2.html'}}
 <h2>Current events</h2>
-<ul>{{for event in events:}}
     <h3>Public Events:</h3>
-        {{if event.public is not None and event.public is True:}}
-        {{=LI(A(event.title, _href=URL('show', args=event.id)))}}
+    <ul>{{for event in events:}}
+            {{if event.public is not None and event.public is True:}}
+            {{=LI(A(event.title, _href=URL('show', args=event.id)))}}
+            {{pass}}
         {{pass}}
+    </ul>
     <h3>Private Events:</h3>
-        {{if event.public is not None and event.public is False:}}
-        {{=LI(A(event.title, _href=URL('show', args=event.id)))}}
+    <ul>{{for event in events:}}
+            {{if event.public is not None and event.public is False:}}
+            {{=LI(A(event.title, _href=URL('show', args=event.id)))}}
+            {{pass}}
         {{pass}}
-    {{pass}}
-</ul>
+    </ul>
 [ {{=A('create_event', _href=URL('create'))}} ]
