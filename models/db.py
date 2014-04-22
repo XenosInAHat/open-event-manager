@@ -8,11 +8,11 @@ crud = Crud(db)
 db.define_table('event',
         Field('title'),
         Field('event_date', 'date'),
-        #Field('date'),
         Field('host'),
         Field('location'),
         Field('description', 'text'),
         Field('public', 'boolean'),
+        Field('author'),
         format = '%(event)s')
 
 db.event.description.requires = IS_NOT_EMPTY()
@@ -20,3 +20,4 @@ db.event.event_date.requires = IS_NOT_EMPTY()
 db.event.event_date.requires = IS_DATE()
 db.event.host.requires = IS_NOT_EMPTY()
 db.event.title.requires = IS_NOT_EMPTY()
+db.event.author.readable = db.event.author.writable = False
