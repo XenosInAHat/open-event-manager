@@ -5,6 +5,7 @@ def index():
 @auth.requires_login()
 def create():
     form = SQLFORM(db.event).process(next=URL('index'))
+    db.event.author = auth.user_id
     return dict(form=form)
 
 def show():
