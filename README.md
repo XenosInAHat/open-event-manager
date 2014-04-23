@@ -8,7 +8,7 @@ A web-based event manager, using the web2py framework.
 Currently uses web2py's default Login page.
 * **Create/display event**:  
 Uses a basic form to fill in a database record.
-* **Delete event**:  
+* **Delete event** _(has issues at the moment)_:  
 Removes event from database after confirmation.  
 _This is only available to the user who created the event_.
 * **Home page link**:  
